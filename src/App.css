@@ -1,21 +1,39 @@
+:root {
+	--primary-c:#e65100;
+	--secondary-c: #04263D;
+	
+	--white: #FDFBFB;
+	
+	--text: #082943;	
+  --bg: var(--primary-c);
+  --gradient:linear-gradient(60deg, #0d47a1, #01579b)
+}
+html,body{
+  font-family:'Roboto' !important;
+}
 .App {
   text-align: center;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  /* height: 40vmin; */
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  display: inline-block;
+  width: 100%;
 }
 
 .App-link {
@@ -29,4 +47,135 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-nav-item li{
+  display: inline;
+  padding: 10px;
+  text-decoration: none;
+  list-style: none;
+}
+.App-nav-item li a{
+  color:#fff;
+  text-decoration: none;
+}
+
+.App-nav-item li a:hover{
+  color: #61dafb;
+}
+nav .brand-logo {
+  left: 0.5rem;
+  padding: 0;
+}
+html,body{
+  height: 100%;
+}
+#root,.App,.routes,#content{
+  height: 100%;
+}
+#content-main{
+  overflow: scroll;
+}
+/* input[type=radio] {
+	display: none;
+}
+.check {
+	display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 44px;
+}
+input[type="radio"]:checked .circle {
+  opacity: 1;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg) center center no-repeat;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+
+} */
+.radio label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: white;
+  border-radius: 50%;
+  border:1px solid #BEBEBE;
+}
+
+/* On mouse-over, add a grey background color */
+.radio label:hover input ~ .check {
+  background-color: transparent;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio label input:checked ~ .check {
+  background-color: white;
+  border:1px solid #BEBEBE;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio label input:checked ~ .check:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio label .check:after {
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background:var(--primary-c);
+}
+.sv_main input[type="button"], .sv_main button{
+  padding:10px !important;
+  background: var(--gradient) !important;
+}
+button:focus{
+  outline: none !important;
+}
+.sv_main,.sv_custom_header{
+  background-color: transparent !important;
+}
+a{
+  text-decoration:none !important
 }

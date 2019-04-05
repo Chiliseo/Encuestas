@@ -3,19 +3,39 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "apexcharts": "^3.2.1",
+    "axios": "^0.18.0",
+    "bootstrap": "^3.3.7",
+    "chart.js": "^2.7.3",
+    "clsx": "^1.0.3",
+    "emotion-ratings": "^2.0.2",
+    "firebase": "^5.9.2",
+    "jquery": "^3.3.1",
+    "querystring": "^0.2.0",
     "react": "^16.7.0",
+    "react-detect-offline": "^2.1.2",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.1"
+    "react-globally": "^1.1.0",
+    "react-materialize": "^2.6.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "styled-components": "^4.2.0",
+    "survey-react": "latest",
+    "surveyjs-editor": "latest",
+    "surveyjs-widgets": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && now build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": ".",
   "browserslist": [
     ">0.2%",
     "not dead",
