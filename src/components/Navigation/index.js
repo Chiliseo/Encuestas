@@ -5,7 +5,7 @@ import NavigationNonAuth from '../../routes/NavigationNonAuth'
 import { AuthUserContext } from '../Session';
 
 const Navigation = () => (
-    <div>
+    <div class="App">
       <AuthUserContext.Consumer>
         {authUser =>
           authUser ? <NavigationAuth /> : <NavigationNonAuth />

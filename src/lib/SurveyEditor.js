@@ -76,7 +76,7 @@ class SurveyEditor extends Component {
     let surveyData=JSON.parse(this.editor.text);
     // let locale=surveyData.locale;
     let title=surveyData.title;
-    let url='//e4cconline.com/encuesta/Api/';
+    let url=process.env.REACT_APP_API_REMOTE;
     let typeAction=this.state.action.typeAction;
     let id=this.state.action.id;
     if(typeAction==='edit'){

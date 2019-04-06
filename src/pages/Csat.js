@@ -83,9 +83,8 @@ export class CsatList extends Component {
       loading: !state.loading,
     }));
     _axios
-      .get(`${process.env.API_REMOTE}csat_active/`)
+      .get(`${process.env.REACT_APP_API_REMOTE}csat_active/`)
       .then(({ data }) => {
-        console.log(data);
         if (data.csat) {
           this.setState({ idcsat: data.csat[0].id });
         }
@@ -112,7 +111,7 @@ export class CsatList extends Component {
     console.log(idcontrol);
     if (idcontrol > 0) {
       _axios
-        .get(`${process.env.API_REMOTE}get_info_control/${idcontrol}`)
+        .get(`${process.env.REACT_APP_API_REMOTE}get_info_control/${idcontrol}`)
         .then(({ data }) => {
           // console.log(data.data[0]);
           if (data.success) {
@@ -265,10 +264,8 @@ export class Csat extends Component {
       match: { params }
     } = this.props;
 
-    console.log(params);
-
     _axios
-      .get(`${process.env.API_REMOTE}csat/${this.state.match.params.id}`)
+      .get(`${process.env.REACT_APP_API_REMOTE}csat/${this.state.match.params.id}`)
       .then(({ data }) => {
         // console.log(data.survey[0]);
         let jsonData = JSON.parse(data.survey[0].json);
@@ -289,7 +286,7 @@ export class Csat extends Component {
         'Content-Type': 'application/x-www-form-urlencoded'
       }
     }
-    const baseURL = process.env.API_REMOTE;
+    const baseURL = process.env.REACT_APP_API_REMOTE;
     const axios = _axios.create({
       baseURL,
       timeout: 1000000000,
@@ -308,7 +305,7 @@ export class Csat extends Component {
     }
     // }
 
-    // axios.post('${process.env.API_REMOTE}saveAnswers',data,config)
+    // axios.post('${process.env.REACT_APP_API_REMOTE}saveAnswers',data,config)
     //   .then(res=>{
     //     console.log(res);
     //   })

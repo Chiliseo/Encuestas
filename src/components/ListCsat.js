@@ -61,7 +61,7 @@ class SimpleTable extends Component{
         'Content-Type': 'application/x-www-form-urlencoded'
       }
     }
-    axios.post('//e4cconline.com/encuesta/Api/updateStatusSurvey',data,config)
+    axios.post(`${process.env.REACT_APP_API_REMOTE}updateStatusSurvey`,data,config)
     .then(res=>{
       console.log(res);
       const itemIndex = this.state.items.findIndex(i=> i.id === id);

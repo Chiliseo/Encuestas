@@ -27,12 +27,12 @@ class EditCsatForm extends Component{
         this.setState({ idCsat:params.idcsat});
         this.result = await this.loadMySurvey(params.idcsat);
         // const result = await axios
-        // .get(`//e4cconline.com/encuesta/Api/csat/${params.idcsat}`)
+        // .get(`${process.env.REACT_APP_API_REMOTE}csat/${params.idcsat}`)
         // this.setState({ jsonSurver:JSON.parse(result.data.survey[0].json)});
     }
     async loadMySurvey(idcsat){
        const result = await axios
-        .get(`//e4cconline.com/encuesta/Api/csat/${idcsat}`)
+        .get(`${process.env.REACT_APP_API_REMOTE}csat/${idcsat}`)
         // console.log(result)
         this.setState({ jsonSurver:JSON.parse(result.data.survey[0].json)});
         return this.state.jsonSurver

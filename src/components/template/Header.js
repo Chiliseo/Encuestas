@@ -44,9 +44,7 @@ class ButtonAppBar extends Component {
     this.state = {
       login: false
     };
-    console.log(props);
     this.signOut = this.signOut.bind(this)
-    //  console.log(props.globalState.login);
   }
   signOut() {
     sessionStorage.clear();

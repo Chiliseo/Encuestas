@@ -10,7 +10,7 @@ export class SettingsView extends Component {
         }
     }
     componentDidMount() {
-        axios.get(`${process.env.API_REMOTE}list_csat/`)
+        axios.get(`${process.env.REACT_APP_API_REMOTE}list_csat/`)
         .then(({ data: survey }) => {
             this.setState({ row:survey.survey});
         });

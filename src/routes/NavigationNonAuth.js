@@ -35,7 +35,6 @@ const styles = theme => ({
 
 const NavigationNonAuth = props => {
   const { classes } = props;
-    console.log(process.env);
   return (
     <div className="routes">
         <div className={classes.root} id="content">
@@ -44,7 +43,6 @@ const NavigationNonAuth = props => {
             <Route path={ROUTES.CSAT_LIST} component={CsatList} />
             <Route path={ROUTES.CSAT_ID_CONTROL} component={Csat} />
             <Route path={ROUTES.LOGIN} component={Login} />
-            {/* <Route component={Login} /> */}
             
           </main>
         </div>

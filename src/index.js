@@ -14,15 +14,13 @@ const initialState = {
   login: sessionStorage.getItem("login") || false
 };
 function updateIndicator() {
-  console.log(this);
-  console.log(navigator.onLine);
   if (navigator.onLine) {
     const config = {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       }
     };
-    const baseURL = process.env.API_REMOTE;
+    const baseURL = process.env.REACT_APP_API_REMOTE;
     const axios = _axios.create({
       baseURL,
       timeout: 1000000000
